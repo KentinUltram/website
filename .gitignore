@@ -7,8 +7,10 @@ build/
 classic.json
 classic.jsonp
 ext/
+.vscode/
 modern.json
 modern.jsonp
 resources/sass/.sass-cache/
 resources/.arch-internal-preview.css
 .arch-internal-preview.css
+readme.txt
