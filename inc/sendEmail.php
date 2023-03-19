@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'user@website.com';
+$siteOwnersEmail = 'fromentquentin@gmail.com';
 
 
 if($_POST) {
@@ -28,6 +28,7 @@ if($_POST) {
 
 
    // Set Message
+   $message ="";
    $message .= "Email from: " . $name . "<br />";
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
