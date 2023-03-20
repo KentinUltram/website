@@ -50,15 +50,32 @@
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
 						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li id="language" class="current_lang"><a>French</a></li>	
 						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
 						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
 						<li><a class="smoothscroll"  href="#portfolio" title="">Hobbies</a></li>
 						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>					
-						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>
 						<li><a href="styles.html" title="">Style Demo</a></li>				
 					</ul>
 				</nav>    		
    		</div> <!-- /top-bar --> 
+   		<!-- <div class="top-bar-right">
+			<a class="menu-toggle-right" href="#"><span>Menu</span></a>
+
+	   		<div class="logo-right">
+		         <a href="index.html">Languages</a>
+		      </div>
+			  <nav id="main-nav-wrap-right">
+				<ul class="main-navigation-right">
+					<li class="current"><a class="smoothscroll"  href="#intro" title="">English</a></li>
+					<li><a class="smoothscroll"  href="#about" title="">French</a></li>
+
+				</ul>
+			  </nav>
+		</div> -->
+		
+
    		
    	</div> <!-- /row --> 		
    </header> <!-- /header -->
@@ -74,15 +91,15 @@
 
    			<div class="col-twelve">
 
-	   			<h5>Top of the morning to you</h5>
-	   			<h1>I'm Quentin Froment.</h1>
+	   			<h5 id="intro-content-h5">Top of the morning to you</h5>
+	   			<h1 id="intro-content-h1">I'm Quentin Froment.</h1>
 
 	   			<p class="intro-position">
-	   				<span>System Engineer</span>
-	   				<span>Software Engineer</span> 
+	   				<span id="intro-position1">System Engineer</span>
+	   				<span id="intro-position2">Software Engineer</span> 
 	   			</p>
 
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+	   			<a class="button stroke smoothscroll" href="#about" title="" id="aboutlink">More About Me</a>
 
 	   		</div>  
    			
@@ -93,7 +110,7 @@
          <li><a href="https://www.facebook.com/quentin.froment1/" target="_blank"><i class="fa fa-facebook"></i></a></li>
          <li><a href="https://twitter.com/KentinUltram" target="_blank"><i class="fa fa-twitter"></i></a></li>
 		 <li><a href="https://www.instagram.com/quentin.fr31/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-		 <li><a href="https://fr.linkedin.com/in/quentin-froment-40040b77" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+		 <li><a href="https://fr.linkedin.com/in/froment-quentin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 		 
       </ul> <!-- /intro-social -->      	
 
@@ -107,14 +124,14 @@
    	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>About</h5>
-   			<h1>Let me introduce myself</h1>
+   			<h5 id="about-h5">About</h5>
+   			<h1 id="about-h1">Let me introduce myself</h1>
 
    			<div class="intro-info">
 
    				<img src="images/profile-pic.jpg" alt="Profile Picture">
 
-   				<p class="lead">I am <script>document.write(getAge("1991/12/10"))</script> years old man, living near the wonderful city of Toulouse in the south west of France, known for its incredible rugby team among other things :).  I've worked here for 7 years, 6 in a small company, located in the south of Toulouse, as a System Engineer. As the only IT people of the company when I started, I worked as network administrator, sysadmin and also sofware engineer. My role is to support all my company business units from creating APIs, working in frontend/backend developments to installing servers or softwares and so on.</p>
+   				<p id="intro-info-p" class="lead">I am <script>document.write(getAge("1991/12/10"))</script> years old man, living near the wonderful city of Toulouse in the south west of France, known for its incredible rugby team among other things :).  I've worked here for 7 years, 6 in a small company, located in the south of Toulouse, as a System Engineer. As the only IT people of the company when I started, I worked as network administrator, sysadmin and also sofware engineer. My role is to support all my company business units from creating APIs, working in frontend/backend developments to installing servers or softwares and so on.</p>
    			</div>   			
 
    		</div>   		
@@ -124,21 +141,21 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Profile</h3>
-   			<p>I have 7 years of experience in IT domain as software and system engineer. I'm a very sociable and nice person to work with. I'm also fast to adapt to a new environment/technology</p>
+   			<h3 id="about-content-h3">Profile</h3>
+   			<p id="about-content-p">I have 7 years of experience in IT domain as software and system engineer. I'm a very sociable and nice person to work with. I'm also fast to adapt to a new environment/technology</p>
 
    			<ul class="info-list">
    				<li>
-   					<strong>Fullname:</strong>
+   					<strong id="info-list-fullname">Fullname:</strong>
    					<span>Quentin Froment</span>
    				</li>
    				<li>
-   					<strong>Birth Date:</strong>
-   					<span>December, 1991</span>
+   					<strong id="info-list-birth">Birth Date:</strong>
+   					<span id="info-list-birth-span">December, 1991</span>
    				</li>
    				<li>
    					<strong>Job:</strong>
-   					<span>System/Software Engineer</span>
+   					<span id="info-list-job-span">System/Software Engineer</span>
    				</li>
    				<li>
    					<strong>Website:</strong>
@@ -155,13 +172,13 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Skills</h3>
-   			<p>I've worked with lots of different programming languages in backend and frontend devleopment</p>
+   			<h3 id="skills-h3">Skills</h3>
+   			<p id="skills-p">I've worked with lots of different programming languages in backend and frontend devleopment</p>
 
 				<ul class="skill-bars">
 					<li>
 						<div class="progress percent80"><span>80%</span></div>
-						<strong>UNIX System</strong>
+						<strong>LINUX</strong>
 					</li>
 				   <li>
 					   <div class="progress percent70"><span>70%</span></div>
@@ -198,8 +215,8 @@
 
    	<div class="row button-section">
    		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll" id="contact-me-button">Contact Me</a>
+   			<a href="#" title="Download CV" class="button button-primary" id="download-cv-button">Download Resume</a>
    		</div>   		
    	</div>
 
@@ -213,10 +230,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Resume</h5>
-   			<h1>More of my credentials.</h1>
+   			<h5 id="resume-h5">Resume</h5>
+   			<h1 id="resume-h1">More of my credentials.</h1>
 
-   			<p class="lead">I am open to new experiences to expand my management skills.</p>
+   			<p class="lead" id="resume-p">I am open to new experiences to expand my management skills.</p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -225,7 +242,7 @@
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Work Experience</h2>
+   			<h2 id="timeline-work-experience-h2">Work Experience</h2>
 
    		</div> <!-- /resume-header -->
 
@@ -240,13 +257,13 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>System/Software Engineer</h3>
-	   					<p>February 2017 - Present</p>
+	   					<h3 id="timeline-work-experience-job1">System/Software Engineer</h3>
+	   					<p id="timeline-work-experience-job1-period">February 2017 - Present</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>TerraNIS</h4>
-	   					<p>My role at TerraNIS is to help all its business units to develop new features, to maintain all existing systems (servers, computers, apps,api,backends and frontends, docker containers) and new ones to come. I also have the role of network administrator.Since the beginning of the year I started learning DevOps skills and working in the Google Cloud environment. </p>
+	   					<h4 id="timeline-work-experience-job1-location">TerraNIS</h4>
+	   					<p id="timeline-work-experience-job1-role">My role at TerraNIS is to help all its business units to develop new features, to maintain all existing systems (servers, computers, apps,api,backends and frontends, docker containers) and new ones to come. I also have the role of network administrator.Since the beginning of the year I started learning DevOps skills and working in the Google Cloud environment. </p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -258,13 +275,13 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Software Engineer</h3>
-	   					<p>October 2015 - February 2017</p>
+	   					<h3 id="timeline-work-experience-job2">Software Engineer</h3>
+	   					<p id="timeline-work-experience-job2-period">November 2015 - February 2017</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Astek</h4>
-	   					<p>As a consultant I've done several missions for  different companies such as CIMPA in which I created a KPI management console application in C#, for the Airbus Fundation I've migrating its Joomla website to a new version and completed its missing features (in PHP), and participated in internals projects in NodeJS,Xamarin </p>
+	   					<h4 id="timeline-work-experience-job2-location">Astek</h4>
+	   					<p id="timeline-work-experience-job2-role">As a consultant I've done several missions for  different companies such as CIMPA in which I created a KPI management console application in C#, for the Airbus Fundation I've migrating its Joomla website to a new version and completed its missing features (in PHP), and participated in internals projects in NodeJS,Xamarin </p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -280,7 +297,7 @@
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Education</h2>
+   			<h2 id="timeline-education-h2">Education</h2>
 
    		</div> <!-- /resume-header -->
 
@@ -294,13 +311,13 @@
 					</div>
 
 					<div class="timeline-header">
-						<h3>Specialize Master Degree</h3>
-						<p>September 2014 - September 2015</p>
+						<h3 id="timeline-education-edu1">Specialize Master Degree</h3>
+						<p id="timeline-education-edu1-period">September 2014 - September 2015</p>
 					</div>
 
 					<div class="timeline-content">
-						<h4>IMT Atlantique Brest</h4>
-						<p>Year of specialization in web technology : System Services and Security, validated by an internship in Thales Brest</p>
+						<h4 id="timeline-education-edu1-location">IMT Atlantique Brest</h4>
+						<p id="timeline-education-edu1-role">Year of specialization in web technology : System Services and Security, validated by an internship in Thales Brest</p>
 					</div>
 
 				</div> <!-- /timeline-block -->
@@ -311,13 +328,13 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Master Degree</h3>
-	   					<p>September 2011 - July 2014</p>
+	   					<h3 id="timeline-education-edu2">Master Degree</h3>
+	   					<p id="timeline-education-edu2-period">September 2011 - July 2014</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>ENIB - Brest National School of Engineering</h4>
-	   					<p>Master’s Degree in Engineering majored in Computer sciences</p>
+	   					<h4 id="timeline-education-edu2-location">ENIB - Brest National School of Engineering</h4>
+	   					<p id="timeline-education-edu2-role">Master’s Degree in Engineering majored in Computer sciences</p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -329,13 +346,13 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Two year Degree</h3>
-	   					<p>September 2009 - July 2011</p>
+	   					<h3 id="timeline-education-edu3">Two year Degree</h3>
+	   					<p id="timeline-education-edu3-period">September 2009 - July 2011</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>IUT Blagnac - Blagnac Institute of Technology</h4>
-	   					<p>Two year degree majored in Network and Telecommunications</p>
+	   					<h4 id="timeline-education-edu3-location">IUT Blagnac - Blagnac Institute of Technology</h4>
+	   					<p id="timeline-education-edu3-role">Two year degree majored in Network and Telecommunications</p>
 	   				</div>
 
 	   			</div> <!-- /timeline-block -->
@@ -352,7 +369,7 @@
 
 		<div class="col-twelve resume-header">
 
-			<h2>Internships</h2>
+			<h2 id="timeline-internship-h2">Internships</h2>
 
 		</div> <!-- /resume-header -->
 
@@ -366,13 +383,13 @@
 				 </div>
 
 				 <div class="timeline-header">
-					 <h3>Brest</h3>
-					 <p>April 2015 - September 2015</p>
+					 <h3 id="timeline-internship-i1">Brest</h3>
+					 <p id="timeline-internship-i1-period">April 2015 - September 2015</p>
 				 </div>
 
 				 <div class="timeline-content">
-					 <h4>Thales Airbourne Systems</h4>
-					 <p>Test Driven Development on a Test Library developed in JAVA</p>
+					 <h4 id="timeline-internship-i1-location">Thales Airbourne Systems</h4>
+					 <p id="timeline-internship-i1-role">Test Driven Development on a Test Library developed in JAVA</p>
 				 </div>
 
 			 </div> <!-- /timeline-block -->
@@ -383,13 +400,13 @@
 					</div>
 
 					<div class="timeline-header">
-						<h3>Toulouse</h3>
-						<p>July 2013 - December 2013</p>
+						<h3 id="timeline-internship-i2">Toulouse</h3>
+						<p id="timeline-internship-i2-period">July 2013 - December 2013</p>
 					</div>
 
 					<div class="timeline-content">
-						<h4>CNES - French Space Agency</h4>
-						<p>Study and creation of tutorials about Obeo Designer to create dynamic schemas of satelite systems </p>
+						<h4 id="timeline-internship-i2-location">CNES - French Space Agency</h4>
+						<p id="timeline-internship-i2-role">Study and creation of tutorials about Obeo Designer to create dynamic schemas of satelite systems </p>
 					</div>
 
 				</div> <!-- /timeline-block -->
@@ -401,13 +418,13 @@
 					</div>
 
 					<div class="timeline-header">
-						<h3>Toulouse</h3>
-						<p>September 2012 - December 2012</p>
+						<h3 id="timeline-internship-i3">Toulouse</h3>
+						<p id="timeline-internship-i3-period">September 2012 - December 2012</p>
 					</div>
 
 					<div class="timeline-content">
-						<h4>Delair</h4>
-						<p>Creation of new windows in a QT/C++ desktop App which was used to follow a drone and store pictures from its flight in real time</p>
+						<h4 id="timeline-internship-i3-location">Delair</h4>
+						<p id="timeline-internship-i3-role">Creation of new windows in a QT/C++ desktop App which was used to follow a drone and store pictures from its flight in real time</p>
 					</div>
 
 				</div> <!-- /timeline-block -->
@@ -419,13 +436,13 @@
 					</div>
 
 					<div class="timeline-header">
-						<h3>Kourou, Galiot Station, French Guyana</h3>
-						<p>June 2012 - August 2012</p>
+						<h3 id="timeline-internship-i4">Kourou, Galiot Station, French Guyana</h3>
+						<p id="timeline-internship-i4-period">June 2012 - August 2012</p>
 					</div>
 
 					<div class="timeline-content">
-						<h4>CNES - French Space Agency</h4>
-						<p>Creation of a small desktop App in C/GTK to display statistics from Arianne telemetry</p>
+						<h4 id="timeline-internship-i4-location">CNES - French Space Agency</h4>
+						<p id="timeline-internship-i4-role">Creation of a small desktop App in C/GTK to display statistics from Arianne telemetry</p>
 					</div>
 
 				</div> <!-- /timeline-block -->
@@ -436,13 +453,13 @@
 					</div>
 
 					<div class="timeline-header">
-						<h3>Tallaght, Ireland</h3>
-						<p>April 2011 - July 2011</p>
+						<h3 id="timeline-internship-i5">Tallaght, Ireland</h3>
+						<p id="timeline-internship-i5-period">April 2011 - July 2011</p>
 					</div>
 
 					<div class="timeline-content">
-						<h4>Institute of Technology Tallaght, Dublin</h4>
-						<p>Creation of an interactive tool for student to calculate electronic low pass filter transfer function</p>
+						<h4 id="timeline-internship-i5-location">Institute of Technology Tallaght, Dublin</h4>
+						<p id="timeline-internship-i5-role">Creation of an interactive tool for student to calculate electronic low pass filter transfer function</p>
 					</div>
 
 				</div> <!-- /timeline-block -->
@@ -463,10 +480,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Hobbies</h5>
-   			<h1>What I do outside </h1>
+   			<h5 id="hobbies">Hobbies</h5>
+   			<h1 id="hobbies-h1">What I do outside </h1>
 
-   			<p class="lead">Since a while I was interesting in music, I started learning guitar, was also interesting in learning the piano and ,even if it's not related to music, began some week ago a photography course. I love penguins, cooking (not cooking penguins) and history.</p>
+   			<p id="hobbies-p" class="lead">Since a while I was interesting in music, I started learning guitar, was also interesting in learning the piano and ,even if it's not related to music, began some week ago a photography course. I love penguins, cooking (not cooking penguins) and history.</p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
@@ -584,7 +601,7 @@
 
 					   <div class="description-box">
 					      <h4>Night city lights</h4>		      
-					      <p>The hights of Ramonville city by night, trying to test photos on a phone  (Oppo Find X2 Pro)</p>
+					      <p id="modal-01-p">The hights of Ramonville city by night, trying to test photos on a phone  (Oppo Find X2 Pro)</p>
 
 					      <div class="categories">City</div>			               
 					   </div>
@@ -604,7 +621,7 @@
 
 					   <div class="description-box">
 					      <h4>Mimosa</h4>		      
-					      <p>A pic of a beautiful mimosa, who doesn't love a bit of spring colors</p>
+					      <p id="modal-02-p">A pic of a beautiful mimosa, who doesn't love a bit of spring colors</p>
 
 					      <div class="categories">Trees</div>			               
 					   </div>
@@ -624,7 +641,7 @@
 
 					   <div class="description-box">
 					      <h4>Sunlight</h4>		      
-					      <p>Sunlight on the city</p>
+					      <p id="modal-03-p">Sunlight on the city</p>
 
 					      <div class="categories">City</div>			               
 					   </div>
@@ -644,7 +661,7 @@
 
 					   <div class="description-box">
 					      <h4>Canal du Midi</h4>		      
-					      <p>The renown "Canal du Midi" created by Pierre-Paul Riquet</p>
+					      <p id="modal-04-p">The renown "Canal du Midi" created by Pierre-Paul Riquet</p>
 
 					      <div class="categories">Trees</div>			               
 					   </div>
@@ -664,7 +681,7 @@
 
 					   <div class="description-box">
 						<h4>Bike</h4>		      
-						<p>Have I told you that I love my bike ? Really ? I didn't think so</p>
+						<p id="modal-05-p">Have I told you that I love my bike ? Really ? I didn't think so</p>
 
 					      <div class="categories">Motorcycle</div>			               
 					   </div>
@@ -684,7 +701,7 @@
 
 					   <div class="description-box">
 					      <h4>Sky</h4>		      
-					      <p>The strange colors of the sky when the sun hits the clouds</p>
+					      <p id="modal-06-p">The strange colors of the sky when the sun hits the clouds</p>
 
 					      <div class="categories">City</div>			               
 					   </div>
@@ -719,10 +736,10 @@
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Services</h5>
-   			<h1>What I do at work</h1>
+   			<h5 id="services-h5">Services</h5>
+   			<h1 id="services-h1">What I do at work</h1>
 
-   			<p class="lead">A short list of my main subjects at work</p>
+   			<p id="services-p"cclass="lead">A short list of my main subjects at work</p>
 
    		</div>   		
    	</div> <!-- /section-intro -->
@@ -737,9 +754,9 @@
 
 	            <div class="service-content">	
 
-	            	 <h3>Server Management</h3>
+	            	 <h3 id="services-s1-h3">Server Management</h3>
 
-		            <p class="desc">I install and manage all my company servers, from system to its security (setup fail2ban,firewall,webservers, apache modsecurity and so on), deploy our backend containers, setup databases...
+		            <p id="services-s1-p" class="desc">I install and manage all my company servers, from system to its security (setup fail2ban,firewall,webservers, apache modsecurity and so on), deploy our backend containers, setup databases...
 	         		</p>
 	         		
 	         	</div> 	         	 
@@ -754,9 +771,9 @@
 				   
 				   <div class="service-content">
 					   
-					   <h3>Backend development</h3>
+					   <h3 id="services-s2-h3" >Backend development</h3>
 					   
-					   <p class="desc">Working with the different product lines teams to create/make evolve their backends, integrate weather data to ingest them into our backends...
+					   <p id="services-s2-p" class="desc">Working with the different product lines teams to create/make evolve their backends, integrate weather data to ingest them into our backends...
 					</p> 
 					
 	            </div>                
@@ -769,9 +786,9 @@
 
 			 <div class="service-content">
 
-				 <h3>API</h3>
+				 <h3 id="services-s3-h3">API</h3>
 
-				 <p class="desc">I created APIs in PHP , NodeJS and Python for several projects 
+				 <p id="services-s3-p" class="desc">I created APIs in PHP , NodeJS and Python for several projects 
 					 </p> 
 
 			 </div> 	            	               
@@ -783,9 +800,9 @@
 
 			<div class="service-content">	
 
-				<h3>FrontEnd Development</h3>  
+				<h3 id="services-s4-h3">FrontEnd Development</h3>  
 
-				<p class="desc">I created several website for my company services, using Angular Framework
+				<p id="services-s4-p" class="desc">I created several website for my company services, using Angular Framework
 				 </p>
 
 			</div>	                          
@@ -819,7 +836,7 @@
 							120
 						</h3>
 
-						<h5 class="stat-title">
+						<h5 id="stat-ideas" class="stat-title">
 							Crazy Ideas
 						</h5>
 
@@ -835,7 +852,7 @@
 							1500
 						</h3>
 
-						<h5 class="stat-title">
+						<h5 id="stat-coffee" class="stat-title">
 							Coffee Cups Per Day
 						</h5>
 
@@ -851,7 +868,7 @@
 							7200
 						</h3>
 
-						<h5 class="stat-title">
+						<h5 id="stat-hours" class="stat-title">
 							Hours
 						</h5>
 
@@ -873,9 +890,9 @@
    		<div class="col-twelve">
 
    			<h5>Contact</h5>
-   			<h1>I'd Love To Hear From You.</h1>
+   			<h1 id="contact-h1">I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Leave me a message, I'll answer as soon as possible :)</p>
+   			<p id="contact-p" class="lead">Leave me a message, I'll answer as soon as possible :)</p>
 
    		</div> 
    	</div> <!-- /section-intro -->
@@ -889,7 +906,7 @@
       			<fieldset>
 
                   <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="">
                   </div>
                   <div class="form-field">
 	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
@@ -898,12 +915,12 @@
 	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
 	               </div>                       
                   <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
-                     <button class="submitform">Submit</button>
+                     <button class="submitform" id="submitform">Submit</button>
                      <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
+                        <div class="text-loader" id="submitform-sending">Sending...</div>                             
        				      <div class="s-loader">
 								  	<div class="bounce1"></div>
 								  	<div class="bounce2"></div>
@@ -935,7 +952,7 @@
    				<i class="icon-pin"></i>
    			</div>
 
-   			<h5>Where to find me</h5>
+   			<h5 id="contact-form-location">Where to find me</h5>
 
    			<p>
             Ramonville<br>
@@ -950,7 +967,7 @@
    				<i class="icon-mail"></i>
    			</div>
 
-   			<h5>Email Me At</h5>
+   			<h5 id="contact-form-email">Email Me At</h5>
 
    			<p>fromentquentin@gmail.com	     
 			   </p>
@@ -963,7 +980,7 @@
    				<i class="icon-phone"></i>
    			</div>
 
-   			<h5>Call Me At</h5>
+   			<h5 id="contact-form-phone">Call Me At</h5>
 
    			<p>
 			     	Mobile: (+33) 6 16 06 61 08
@@ -988,7 +1005,7 @@
 					<li><a href="https://www.facebook.com/quentin.froment1/" target="_blank"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="https://twitter.com/KentinUltram" target="_blank"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="https://www.instagram.com/quentin.fr31/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="https://fr.linkedin.com/in/quentin-froment-40040b77" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://fr.linkedin.com/in/froment-quentin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 					
 			   </ul> 
 	      		

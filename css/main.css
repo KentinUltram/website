@@ -1102,6 +1102,15 @@ header .top-bar {
 	left: 90px;
 	top: 0;
 }
+header .top-bar-right {
+	display: block;
+	background: #000000;
+	min-width: 220px;
+	min-height: 66px;
+	position: absolute;
+	right: 90px;
+	top: 0;
+}
 header .logo {
 	float: left;
 	margin-left: 20px;
@@ -1122,6 +1131,28 @@ header .logo a {
 	background: url("../images/Slide1.jpg") no-repeat center;
 	/* background: url("../images/logo.png") no-repeat center; */
 	background-size: 92px 15px;
+}
+header .logo-right {
+	float: left;
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-top: 25px;
+	position: relative;
+}
+
+header .logo-right a {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	width: 92px;
+	height: 25px;
+	background: url("../images/Flag_of_Europe.png") no-repeat center;
+	/* background: url("../images/logo.png") no-repeat center; */
+	background-size: 40px 25px;
 }
 
 /**
@@ -1257,6 +1288,143 @@ header .logo a {
 	padding-left: 1rem;
 }
 .main-navigation li.current > a {
+	background: none;
+	color: #a9001c;
+}
+
+/**
+ * menu toggle-right - (_layout.css)
+ * ------------------------------------------------------------------- 
+ */
+ .menu-toggle-right {
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	margin-top: 13px;
+	display: block;
+	position: relative;
+}
+.menu-toggle-right span {
+	display: block;
+	background-color: #a9001c;
+	width: 24px;
+	height: 3px;
+	margin-top: -1.5px;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	bottom: auto;
+	left: auto;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.menu-toggle-right span::before, .menu-toggle-right span::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	position: absolute;
+	left: 0;
+	-moz-transition-duration: 0.2s, 0.2s;
+	-o-transition-duration: 0.2s, 0.2s;
+	-webkit-transition-duration: 0.2s, 0.2s;
+	-ms-transition-duration: 0.2s, 0.2s;
+	transition-duration: 0.2s, 0.2s;
+	-moz-transition-delay: 0.2s, 0s;
+	-o-transition-delay: 0.2s, 0s;
+	-webkit-transition-delay: 0.2s, 0s;
+	-ms-transition-delay: 0.2s, 0s;
+	transition-delay: 0.2s, 0s;
+}
+.menu-toggle-right span::before {
+	top: -8px;
+	-moz-transition-property: top, transform;
+	-o-transition-property: top, transform;
+	-webkit-transition-property: top, transform;
+	-ms-transition-property: top, transform;
+	transition-property: top, transform;
+}
+.menu-toggle-right span::after {
+	bottom: -8px;
+	-moz-transition-property: bottom, transform;
+	-o-transition-property: bottom, transform;
+	-webkit-transition-property: bottom, transform;
+	-ms-transition-property: bottom, transform;
+	transition-property: bottom, transform;
+}
+
+/* is clicked */
+.menu-toggle-right.is-clicked span {
+	background-color: rgba(255, 0, 119, 0);
+}
+.menu-toggle-right.is-clicked span::before, .menu-toggle-right.is-clicked span::after {
+	background-color: #a9001c;
+	-moz-transition-delay: 0s, 0.2s;
+	-o-transition-delay: 0s, 0.2s;
+	-webkit-transition-delay: 0s, 0.2s;
+	-ms-transition-delay: 0s, 0.2s;
+	transition-delay: 0s, 0.2s;
+}
+.menu-toggle-right.is-clicked span::before {
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.menu-toggle-right.is-clicked span::after {
+	bottom: 0;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* navigation panel */
+#main-nav-wrap-right {
+	display: block;
+	width: 100%;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+
+/* dropdown nav */
+.main-navigation-right {
+	background: #000000;
+	padding: 24px 30px 42px;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: none;
+}
+.main-navigation-right > li {
+	display: block;
+	height: auto;
+	text-align: right;
+	padding: 0;
+}
+.main-navigation-right li a {
+	display: block;
+	color: #FFFFFF;
+	width: auto;
+	padding: 15px 0;
+	line-height: 16px;
+	border: none;
+}
+.main-navigation-right li a:hover {
+	color: #a9001c;
+	padding-left: 1rem;
+}
+.main-navigation-right li.current > a {
 	background: none;
 	color: #a9001c;
 }

@@ -186,7 +186,57 @@
 		offset: '25%'
 	});
 
+/*-----------------------------------------------------*/
+  	/* Navigation - right Menu
+   ------------------------------------------------------ */  
+   var toggleButtonright = $('.menu-toggle-right'),
+       navright = $('.main-navigation-right');
 
+   // toggle button
+   toggleButtonright.on('click', function(e) {
+
+		e.preventDefault();
+		toggleButtonright.toggleClass('is-clicked');
+		navright.slideToggle();
+
+	});
+
+   // nav items
+   navright.find('li a').on("click", function() {   
+
+   	// update the toggle button 		
+   	toggleButtonright.toggleClass('is-clicked'); 
+   	// fadeout the navigation panel
+   	navright.fadeOut();   		
+   	     
+  	});
+
+
+   /*---------------------------------------------------- */
+  	/* Highlight the current section in the navigation bar
+  	------------------------------------------------------ */
+	var sections = $("section"),
+	navigation_links_right = $("#main-nav-wrap-right li a");	
+
+	sections.waypoint( {
+
+       handler: function(direction) {
+
+		   var active_section;
+
+			active_section = $('section#' + this.element.id);
+
+			if (direction === "up") active_section = active_section.prev();
+
+			var active_link = $('#main-nav-wrap-right a[href="#' + active_section.attr("id") + '"]');			
+
+			navigation_links_right.parent().removeClass("current");
+			active_link.parent().addClass("current");
+
+		}, 
+
+		offset: '25%'
+	});
 	/*---------------------------------------------------- */
   	/* Smooth Scrolling
   	------------------------------------------------------ */
