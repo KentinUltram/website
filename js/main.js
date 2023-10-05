@@ -267,52 +267,91 @@
 	------------------------------------------------------ */
 
 	/* local validation */
-	$('#contactForm').validate({
+	// $('#contactForm').validate({
 
-		/* submit via ajax */
-		submitHandler: function(form) {
+	// 	/* submit via ajax */
+	// 	submitHandler: function(form) {
 
-			var sLoader = $('#submit-loader');
+	// 		var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+	// 		$.ajax({      	
 
-		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
+	// 	      type: "POST",
+	// 	      url: "inc/sendEmail.php",
+	// 	    //   url: "https://formsubmit.co/fromentquentin@gmail.com",
+	// 	      data: $(form).serialize(),
+	// 	      beforeSend: function() { 
 
-		      	sLoader.fadeIn(); 
+	// 	      	sLoader.fadeIn(); 
 
-		      },
-		      success: function(msg) {
+	// 	      },
+	// 	      success: function(msg) {
 
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
+	//             // Message was sent
+	//             if (msg == 'OK') {
+	//             	sLoader.fadeOut(); 
+	//                $('#message-warning').hide();
+	//                $('#contactForm').fadeOut();
+	//                $('#message-success').fadeIn();   
+	//             }
+	//             // There was an error
+	//             else {
+	//             	sLoader.fadeOut(); 
+	//                $('#message-warning').html(msg);
+	// 	            $('#message-warning').fadeIn();
+	//             }
 
-		      },
-		      error: function() {
+	// 	      },
+	// 	      error: function() {
 
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
+	// 	      	sLoader.fadeOut(); 
+	// 	      	$('#message-warning').html("Something went wrong. Please try again.");
+	// 	         $('#message-warning').fadeIn();
+	// 			console.log($(form	));
+	// 	      }
 
-		      }
+	//       });     		
+  	// 	}
 
-	      });     		
-  		}
+	// });
 
-	});
+	//KEEP THIS FOR HOSTING OUTSIDE GITHUB 
+	// $("#contactForm").validate({
+	// 	/* submit via ajax */
+	// 	submitHandler: function (form) {
+	// 	   var sLoader = $('#submit-loader');
+  
+	// 	   // Serialize the form data
+	// 	   var formData = $(form).serialize();
+  
+	// 	   $.ajax({
+	// 		  type: "POST",
+	// 		  url: "https://formspree.io/f/xdorpbak", // Your Formspree endpoint
+	// 		  data: formData,
+	// 		  beforeSend: function () {
+	// 			 sLoader.fadeIn();
+	// 		  },
+	// 		  success: function (response) {
+	// 			 // Check if the response contains the word "error"
+	// 			 if (response.toLowerCase().indexOf("error") === -1) {
+	// 				sLoader.fadeOut();
+	// 				$('#message-warning').hide();
+	// 				$('#contactForm').fadeOut();
+	// 				$('#message-success').fadeIn();
+	// 			 } else {
+	// 				sLoader.fadeOut();
+	// 				$('#message-warning').html(response);
+	// 				$('#message-warning').fadeIn();
+	// 			 }
+	// 		  },
+	// 		  error: function () {
+	// 			 sLoader.fadeOut();
+	// 			 $('#message-warning').html("Something went wrong. Please try again.");
+	// 			 $('#message-warning').fadeIn();
+	// 		  }
+	// 	   });
+	// 	}
+	//  });
 
 
  	/*----------------------------------------------------- */
@@ -356,6 +395,11 @@
 		"info-list-job-span":"System/Software Engineer",
 		"contact-me-button":"Contact Me",
 		"download-cv-button": "Download Resume",
+		"resumeMenu":"Resume",
+		"aboutMenu":"About",
+		"contactMenu":"Contact",
+		"servicesMenu":"Services",
+		"hobbiesMenu":"Hobbies",
 		"resume-h5":"Resume",
 		"resume-h1":"More of my credentials.",
 		"resume-p":"I am open to new experiences to expand my management skills.",
@@ -455,6 +499,11 @@
 		"info-list-job-span":"Ingénieur Système/Logiciel",
 		"contact-me-button":"Contactez Moi",
 		"download-cv-button": "Obtenir mon CV",
+		"resumeMenu":"Mon CV",
+		"aboutMenu":"A propos",
+		"contactMenu":"Contactez-Moi",
+		"servicesMenu":"Mes Services",
+		"hobbiesMenu":"Mes Hobbies",
 		"resume-h5":"CV",
 		"resume-h1":"Mon parcours et experiences professionnelles",
 		"resume-p":"Je suis ouvert à de nouvelles expériences pour développer mes compétences managériales",
@@ -538,29 +587,65 @@
 
 	}
 	
-	var language = document.getElementById("language");
-	var translate_intro = document.getElementById('intro-content-h5');
-	language.addEventListener("click", function() {
-		change(language);
-		}, false
-	);
+	// var language = document.getElementById("language");
+	// var translate_intro = document.getElementById('intro-content-h5');
+	// language.addEventListener("click", function() {
+	// 	change(language);
+	// 	}, false
+	// );
 	
-	function change(lang){
-		if (language.firstChild.innerHTML=='French'){
-			for (let key in fr) {
-				document.getElementById(key).textContent = fr[key]
-			  }
-			document.getElementById("contactSubject").placeholder = fr['contactSubject']
-			document.getElementById("contactName").placeholder = fr['contactName']
-			language.firstChild.innerHTML = "Anglais";
-		}
-		else if (language.firstChild.innerHTML=='Anglais'){
-			for (let key in en) {
-				document.getElementById(key).textContent = en[key]
-			  }
-			language.firstChild.innerHTML = "French"
-		}
-	}
+	// function change(lang){
+	// 	if (language.firstChild.innerHTML=='French'){
+	// 		for (let key in fr) {
+	// 			document.getElementById(key).textContent = fr[key]
+	// 		  }
+	// 		document.getElementById("contactSubject").placeholder = fr['contactSubject']
+	// 		document.getElementById("contactName").placeholder = fr['contactName']
+	// 		language.firstChild.innerHTML = "Anglais";
+	// 	}
+	// 	else if (language.firstChild.innerHTML=='Anglais'){
+	// 		for (let key in en) {
+	// 			document.getElementById(key).textContent = en[key]
+	// 		  }
+	// 		language.firstChild.innerHTML = "French"
+	// 	}
+	// }
+	var language = document.getElementById("language-switch");
+	var translate_intro = document.getElementById('intro-content-h5');
+	var downloadButton = document.getElementById('download-cv-button');
+
+	var isEnglish = true;
+
+language.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the link from navigating
+    changeLanguage();
+}, false);
+
+function changeLanguage() {
+    if (isEnglish) {
+        // Switch to French
+        for (let key in fr) {
+            document.getElementById(key).textContent = fr[key];
+        }
+		document.getElementById("contactSubject").placeholder = fr['contactSubject']
+		document.getElementById("contactName").placeholder = fr['contactName']
+		downloadButton.href = 'images/resume/CV_FROMENT_2023.pdf';
+        language.textContent = "Switch to English";
+    } else {
+        // Switch to English
+        for (let key in en) {
+            document.getElementById(key).textContent = en[key];
+        }
+		document.getElementById("contactSubject").placeholder = en['contactSubject']
+		document.getElementById("contactName").placeholder = en['contactName']
+		downloadButton.href = 'images/resume/RESUME_FROMENT_2023.pdf';
+        language.textContent = "Passer en Français";
+    }
+
+    // Toggle the language flag
+    isEnglish = !isEnglish;
+}
+
 
 })(jQuery);
 

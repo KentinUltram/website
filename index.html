@@ -47,7 +47,7 @@
 		         <a href="index.html">KUMOPB</a>
 		      </div>		      
 
-		   	<nav id="main-nav-wrap">
+			<!-- <nav id="main-nav-wrap">
 					<ul class="main-navigation">
 						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 						<li id="language" class="current_lang"><a>French</a></li>	
@@ -58,7 +58,20 @@
 						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>
 						<li><a href="styles.html" title="">Style Demo</a></li>				
 					</ul>
-				</nav>    		
+				</nav>    		 -->
+				<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+						<li id="language" class="current_lang"><a href="#" id="language-switch">Passer en Français</a></li>
+						<li><a class="smoothscroll" href="#about" title="" id="aboutMenu">About</a></li>
+						<li><a class="smoothscroll" href="#resume" title="" id="resumeMenu">Resume</a></li>
+						<li><a class="smoothscroll" href="#portfolio" title="" id="hobbiesMenu">Hobbies</a></li>
+						<li><a class="smoothscroll" href="#services" title="" id="servicesMenu">Services</a></li>
+						<li><a class="smoothscroll" href="#contact" title="" id="contactMenu">Contact</a></li>
+						<!-- <li><a href="styles.html" title="">Style Demo</a></li> -->
+					</ul>
+				</nav>
+				
    		</div> <!-- /top-bar --> 
    		<!-- <div class="top-bar-right">
 			<a class="menu-toggle-right" href="#"><span>Menu</span></a>
@@ -216,7 +229,7 @@
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll" id="contact-me-button">Contact Me</a>
-   			<a href="#" title="Download CV" class="button button-primary" id="download-cv-button">Download Resume</a>
+   			<a href="images/resume/RESUME_FROMENT_2023.pdf" title="Download CV" class="button button-primary" id="download-cv-button" target="_blank">Download Resume</a>
    		</div>   		
    	</div>
 
@@ -902,7 +915,7 @@
    		<div class="col-twelve">
 
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
+            <!-- <form name="contactForm" id="contactForm" method="post" action="" target="">
       			<fieldset>
 
                   <div class="form-field">
@@ -930,7 +943,36 @@
                   </div>
 
       			</fieldset>
-      		</form> <!-- Form End -->
+      		</form> Form End -->
+
+			  <form name="contactForm" id="contactForm" method="POST" action="https://formspree.io/f/xdorpbak">
+				<fieldset>
+				   <div class="form-field">
+					  <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required>
+				   </div>
+				   <div class="form-field">
+					  <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required>
+				   </div>
+				   <div class="form-field">
+					  <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+				   </div>
+				   <div class="form-field">
+					  <textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required></textarea>
+				   </div>
+				   <div class="form-field">
+					  <button class="submitform" id="submitform" type="submit">Submit</button>
+					  <div id="submit-loader">
+						 <div class="text-loader" id="submitform-sending">Sending...</div>
+						 <div class="s-loader">
+							<div class="bounce1"></div>
+							<div class="bounce2"></div>
+							<div class="bounce3"></div>
+						 </div>
+					  </div>
+				   </div>
+				</fieldset>
+			 </form>
+			 
 
             <!-- contact-warning -->
             <div id="message-warning">            	
