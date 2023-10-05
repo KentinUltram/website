@@ -1,9 +1,7 @@
-name: Deploy to GitHub Pages on Tag Push
+name: Deploy Manual
 
 on:
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:  # Triggered manually
 
 jobs:
   deploy:
