@@ -1,19 +1,39 @@
-name: Deploy to GitHub Pages on Tag Push
+name: Deploy to Public Repo and GitHub Pages
 
 on:
   push:
     tags:
-      - '*'
+      - 'v*' # Trigger the workflow on tags that start with 'v' (e.g., v1.0.0)
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Copy files to a new directory
+        run: |
+          mkdir public
+          cp -r * public
+        working-directory: ${{ github.workspace }}
+
+      - name: Set up Git
+        run: |
+          git config user.email "fromentquentin@gmail.com"
+          git config user.name "Quentin Froment"
+          git remote add public-repo https://github.com/kentinultram/website.git
+        working-directory: ${{ github.workspace }}
+      
+
+      - name: Push to Public Repository
+        run: |
+          git push public-repo master:gh-pages
+        working-directory: ${{ github.workspace }}
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./public
