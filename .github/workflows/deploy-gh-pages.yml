@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Copy files to a new directory
         run: |
@@ -30,7 +30,7 @@ jobs:
 
       - name: Push to Public Repository
         run: |
-          git push public-repo main:gh-pages
+          git push public-repo HEAD:gh-pages
         working-directory: ${{ github.workspace }}
 
       - name: Deploy to GitHub Pages
