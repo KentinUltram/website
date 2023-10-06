@@ -15,9 +15,10 @@ jobs:
 
       - name: Copy files to a new directory
         run: |
-          mkdir public
-          cp -r * public
+          rsync -av --exclude 'public/' ./ ./public/
         working-directory: ${{ github.workspace }}
+      
+      
 
       - name: Set up Git
         run: |
@@ -29,7 +30,7 @@ jobs:
 
       - name: Push to Public Repository
         run: |
-          git push public-repo master:gh-pages
+          git push public-repo main:gh-pages
         working-directory: ${{ github.workspace }}
 
       - name: Deploy to GitHub Pages
