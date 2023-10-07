@@ -31,7 +31,7 @@ jobs:
       
       - name: Push to Public Repository
         run: |
-          git push public-repo HEAD:gh-pages
+          git push --force public-repo HEAD:gh-pages
         working-directory: ${{ github.workspace }}
 
       - name: Deploy to GitHub Pages
