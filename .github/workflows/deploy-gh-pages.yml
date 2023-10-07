@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.email "fromentquentin@gmail.com"
           git config user.name "Quentin Froment"
-          git remote add public-repo https://github.com/kentinultram/website.git
+          git remote add public-repo https://github.com/KentinUltram/website.git
         working-directory: ${{ github.workspace }}
       
 
