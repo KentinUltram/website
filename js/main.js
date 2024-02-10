@@ -629,7 +629,7 @@ function changeLanguage() {
         }
 		document.getElementById("contactSubject").placeholder = fr['contactSubject']
 		document.getElementById("contactName").placeholder = fr['contactName']
-		downloadButton.href = 'images/resume/CV_FROMENT_2023.pdf';
+		downloadButton.href = 'images/resume/CV_FROMENT.pdf';
         language.textContent = "Switch to English";
     } else {
         // Switch to English
@@ -638,7 +638,7 @@ function changeLanguage() {
         }
 		document.getElementById("contactSubject").placeholder = en['contactSubject']
 		document.getElementById("contactName").placeholder = en['contactName']
-		downloadButton.href = 'images/resume/RESUME_FROMENT_2023.pdf';
+		downloadButton.href = 'images/resume/RESUME_FROMENT.pdf';
         language.textContent = "Passer en Français";
     }
 
